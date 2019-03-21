@@ -1,0 +1,41 @@
+@import "utils/normalize";
+@import "utils/reset";
+@import "utils/flexbox";
+@import "utils/breakpoints";
+
+// Insert more styles below
+.wx-calculator {
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(space-between);
+  align-items: center;
+  .wx-header{
+    font-weight: 800;
+    font-size: 2em;
+    padding: 1em;
+    text-align: center;
+  }
+  .wx-coinage {
+    white-space: nowrap;
+    width: 100%;
+    @include bp-500 {
+      width: 70vw;
+      max-width: 100%;
+    }
+    @include bp-800 {
+      width: 60vw;
+      max-width: 600px;
+    }
+    margin: 0.75em 0;
+    .wx-coin {
+      @include flexbox;
+      @include flex-direction(row);
+      @include justify-content(space-evenly);
+      margin: 0.75em 0;
+      input, label {
+        width: 5em;
+      }
+    }
+
+  }
+}
