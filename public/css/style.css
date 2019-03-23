@@ -504,6 +504,12 @@ body {
   background-color: #1c1c1c;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .wx-calculator {
   display: -webkit-box;
   display: -moz-box;
@@ -539,7 +545,7 @@ body {
 
 .wx-calculator .wx-header {
   font-family: "Abril Fatface", cursive;
-  font-weight: 800;
+  font-weight: 400;
   padding: 1em 0.5em 0.5em;
   text-align: center;
   font-size: 2em;
@@ -617,4 +623,8 @@ body {
 
 .wx-calculator .wx-coinage .wx-coin input.focus {
   outline: none;
+}
+
+.wx-calculator .wx-coinage .wx-coin input.inexact {
+  border-color: #510000;
 }

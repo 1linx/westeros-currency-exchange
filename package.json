@@ -11,6 +11,7 @@
     "body-parser": "^1.10.0",
     "ejs": "^2.5.2",
     "express": "^4.10.4",
+    "mathjs": "^5.8.0",
     "request": "^2.69.0"
   },
   "devDependencies": {

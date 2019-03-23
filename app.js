@@ -4,7 +4,6 @@ var bodyParser = require('body-parser');
 var app = require('express')();
 var port = process.env.PORT || 3000;
 
-
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
