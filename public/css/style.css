@@ -500,6 +500,10 @@ table {
   border-spacing: 0;
 }
 
+body {
+  background-color: #1c1c1c;
+}
+
 .wx-calculator {
   display: -webkit-box;
   display: -moz-box;
@@ -516,13 +520,41 @@ table {
   justify-content: space-between;
   -ms-flex-pack: space-between;
   align-items: center;
+  height: 100%;
+  font-family: "Hind", sans-serif;
+  color: #e8e192;
+}
+
+@media only screen and (min-width: 31.25em) {
+  .wx-calculator {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 50em) {
+  .wx-calculator {
+    font-size: 25px;
+  }
 }
 
 .wx-calculator .wx-header {
+  font-family: "Abril Fatface", cursive;
   font-weight: 800;
-  font-size: 2em;
-  padding: 1em;
+  padding: 1em 0.5em 0.5em;
   text-align: center;
+  font-size: 2em;
+}
+
+@media only screen and (min-width: 31.25em) {
+  .wx-calculator .wx-header {
+    font-size: 2.5em;
+  }
+}
+
+@media only screen and (min-width: 50em) {
+  .wx-calculator .wx-header {
+    font-size: 2em;
+  }
 }
 
 .wx-calculator .wx-coinage {
@@ -533,15 +565,15 @@ table {
 
 @media only screen and (min-width: 31.25em) {
   .wx-calculator .wx-coinage {
-    width: 70vw;
+    width: 60vw;
     max-width: 100%;
   }
 }
 
 @media only screen and (min-width: 50em) {
   .wx-calculator .wx-coinage {
-    width: 60vw;
-    max-width: 600px;
+    width: 50vw;
+    max-width: 1000px;
   }
 }
 
@@ -563,6 +595,26 @@ table {
   margin: 0.75em 0;
 }
 
+.wx-calculator .wx-coinage .wx-coin label {
+  line-height: 40px;
+}
+
 .wx-calculator .wx-coinage .wx-coin input, .wx-calculator .wx-coinage .wx-coin label {
   width: 5em;
+}
+
+.wx-calculator .wx-coinage .wx-coin input {
+  padding: 5px;
+  border-width: 1px;
+  color: #e8e192;
+  border-color: #CCCCCC;
+  background-color: #1c1c1c;
+  border-style: solid;
+  border-radius: 0px;
+  box-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
+  text-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
+}
+
+.wx-calculator .wx-coinage .wx-coin input.focus {
+  outline: none;
 }

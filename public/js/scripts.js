@@ -37,28 +37,36 @@ function calculateExchange(inputField, value) {
       // console.log();
       switch ($(this).find('input').attr('name')) {
         case 'copper-halfpenny':
-          $(this).find('input').val(value*2); // 1 penny == 2 halfpennies
+        var roundedValue = Number.parseFloat(value*2).toFixed(2);
+          $(this).find('input').val(roundedValue); // 1 penny == 2 halfpennies
           break;
         case 'copper-penny':
+        var roundedValue = Number.parseFloat(value).toFixed(2);
           $(this).find('input').val(value); // 1 penny == 1 penny
           break;
         case 'copper-half-groat':
-          $(this).find('input').val(value/2); // 1 half-groat == 2 pennies
+        var roundedValue = Number.parseFloat(value/2).toFixed(2);
+          $(this).find('input').val(roundedValue); // 1 half-groat == 2 pennies
           break;
         case 'copper-groat':
-          $(this).find('input').val(value/4); // 1 groat == 4 pennies
+        var roundedValue = Number.parseFloat(value/4).toFixed(2);
+          $(this).find('input').val(roundedValue); // 1 groat == 4 pennies
           break;
         case 'copper-star':
-          $(this).find('input').val(value/8); // 1 star == 8 pennies
+        var roundedValue = Number.parseFloat(value/8).toFixed(2);
+          $(this).find('input').val(roundedValue); // 1 star == 8 pennies
           break;
         case 'silver-stag':
-          $(this).find('input').val(value/56); // 1 star == 56 pennies
+        var roundedValue = Number.parseFloat(value/56).toFixed(2);
+          $(this).find('input').val(roundedValue); // 1 star == 56 pennies
           break;
         case 'silver-moon':
-          $(this).find('input').val(value/392); // 1 moon == 392 pennies
+        var roundedValue = Number.parseFloat(value/392).toFixed(2);
+          $(this).find('input').val(roundedValue); // 1 moon == 392 pennies
           break;
         case 'gold-dragon':
-          $(this).find('input').val(value/11760); // 1 dragon == 11,760 pennies
+          var roundedValue = Number.parseFloat(value/11760).toFixed(2);
+          $(this).find('input').val(roundedValue); // 1 dragon == 11,760 pennies
           break;
       }
 

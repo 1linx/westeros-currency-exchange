@@ -2,29 +2,49 @@
 @import "utils/reset";
 @import "utils/flexbox";
 @import "utils/breakpoints";
+@import "utils/variables";
 
 // Insert more styles below
+body {
+  background-color: $cc-dark;
+}
 .wx-calculator {
   @include flexbox;
   @include flex-direction(column);
   @include justify-content(space-between);
   align-items: center;
+  height: 100%;
+  font-family: $ff-body;
+  color: $cc-gold;
+  @include bp-500 {
+    font-size: 20px;
+  }
+  @include bp-800 {
+    font-size: 25px
+  }
   .wx-header{
+    font-family: $ff-heading;
     font-weight: 800;
-    font-size: 2em;
-    padding: 1em;
+    padding: 1em 0.5em 0.5em;
     text-align: center;
+    font-size: 2em;
+    @include bp-500 {
+      font-size: 2.5em;
+    }
+    @include bp-800 {
+      font-size: 2em
+    }
   }
   .wx-coinage {
     white-space: nowrap;
     width: 100%;
     @include bp-500 {
-      width: 70vw;
+      width: 60vw;
       max-width: 100%;
     }
     @include bp-800 {
-      width: 60vw;
-      max-width: 600px;
+      width: 50vw;
+      max-width: 1000px;
     }
     margin: 0.75em 0;
     .wx-coin {
@@ -32,8 +52,25 @@
       @include flex-direction(row);
       @include justify-content(space-evenly);
       margin: 0.75em 0;
+      label {
+        line-height: 40px;
+      }
       input, label {
         width: 5em;
+      }
+      input {
+        padding: 5px;
+        border-width: 1px;
+        color: $cc-gold;
+        border-color: #CCCCCC;
+        background-color: rgb(28, 28, 28);
+        border-style: solid;
+        border-radius: 0px;
+        box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+        text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+        &.focus {
+          outline:none;
+        }
       }
     }
   }
