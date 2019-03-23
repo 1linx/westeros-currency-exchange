@@ -567,20 +567,39 @@ input[type=number]::-webkit-outer-spin-button {
   white-space: nowrap;
   width: 100%;
   margin: 0.75em 0;
+  box-shadow: 10px 10px 20px #141414;
 }
 
 @media only screen and (min-width: 37.5em) {
   .wx-calculator .wx-coinage {
-    width: 60vw;
+    width: 65vw;
     max-width: 100%;
   }
 }
 
 @media only screen and (min-width: 56.25em) {
   .wx-calculator .wx-coinage {
-    width: 50vw;
-    max-width: 1000px;
+    width: 37vw;
+    max-width: 570px;
   }
+}
+
+.wx-calculator .wx-coinage .wx-coinage-header {
+  text-align: center;
+  margin: 0.75em 0;
+  font-weight: bold;
+}
+
+.wx-calculator .wx-coinage.wx-coppers {
+  background-color: rgba(238, 146, 0, 0.2);
+}
+
+.wx-calculator .wx-coinage.wx-silvers {
+  background-color: rgba(130, 130, 130, 0.2);
+}
+
+.wx-calculator .wx-coinage.wx-gold {
+  background-color: rgba(112, 99, 5, 0.2);
 }
 
 .wx-calculator .wx-coinage .wx-coin {
