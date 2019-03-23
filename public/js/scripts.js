@@ -32,7 +32,6 @@ function  copperConverter(coin, value) {
 function calculateExchange(inputField, value) {
   $('.wx-coin').each(function() {
     if ($(this).find('input').attr('name') == inputField ) {
-      console.log(inputField + ': ' + value);
       return;
     } else {
       // console.log();
@@ -76,11 +75,9 @@ function calculateExchange(inputField, value) {
 }
 
 function parseCoinValue(float) {
-  console.log('float', float);
   if (float >= 1) {
     // // only show decimals if they are not x.00
     if (Math.floor(float) == float) {
-      console.log('EXACTLY!');
       return {exact: true, result: Math.floor(float)};
     }
     return {exact: false, result: Math.floor(float)};
