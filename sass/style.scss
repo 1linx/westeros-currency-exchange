@@ -46,11 +46,11 @@ input[type=number]::-webkit-outer-spin-button {
   .wx-coinage {
     white-space: nowrap;
     width: 100%;
-    @include bp-500 {
+    @include bp-600 {
       width: 60vw;
       max-width: 100%;
     }
-    @include bp-800 {
+    @include bp-900 {
       width: 50vw;
       max-width: 1000px;
     }
